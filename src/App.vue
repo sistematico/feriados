@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { carregaJson, transformaJson, transformaData, proximoFeriado, formatDate } from './js/feriados'
+import LogoTipo from './components/LogoTipo.vue'
 
 const titulo = ref('')
 const data = ref('')
@@ -25,7 +26,10 @@ onMounted(async () => {
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
       <div>
-        <h3 class="float-md-start mb-0 text-center">Feriados</h3>
+        <h3 class="float-md-start mb-0 text-center">
+          <LogoTipo />
+          Feriados
+        </h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link active">Sobre</a>
         </nav>
